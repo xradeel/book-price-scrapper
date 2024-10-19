@@ -1,0 +1,92 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+.container{
+    padding: 0 100px;
+}
+.search-from{
+    width: 60%;
+}
+.navbar {
+    background-color: #2c3e50;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.search-bar {
+    width: 100%;
+    padding: 10px;
+    border-radius: 25px;
+    border: none;
+    font-size: 16px;
+    outline: none;
+}
+
+.book-info {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.book-image {
+    width: 150px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.book-title {
+    margin: 20px 0 10px;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.author-name {
+    font-size: 18px;
+    color: #777;
+}
+
+.prices {
+    /* display: flex; */
+    justify-content: center;
+    /* flex-wrap: wrap; */
+    padding: 20px;
+}
+
+.price-link {
+    text-decoration: none;
+    color: inherit;
+    margin: 10px;
+    transition: transform 0.2s;
+}
+
+.price-link:hover {
+    transform: scale(1.05);
+}
+
+.price-section {
+    background-color: #ecf0f1;
+    padding: 20px;
+    border-radius: 10px;
+    /* width: 150px; */
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.website-name {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.price {
+    font-size: 18px;
+    color: #e74c3c;
+    font-weight: bold;
+}

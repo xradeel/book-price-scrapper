@@ -1,0 +1,49 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Books On Sale</title>
+    <link rel="stylesheet" href="{% static "style.css" %}">
+  </head>
+  <body>
+    <div class="container">
+      <nav class="navbar">
+        <form class="search-from" method="GET" >
+            <input
+            type="text"
+            class="search-bar"
+            name="query"
+            placeholder="Search for books..."
+            />
+        </form>
+      </nav>
+
+      {% if books %}
+      <div class="book-info">
+        {% for book in books %} {% if book.web == "Readings.com" or book.web == "libertybooks.com" %}
+        <img src="{{ book.image }}" alt="{{ book.title }}" class="book-image" />
+        <h1 class="book-title">{{book.title}}</h1>
+        <p class="author-name">by {{book.author}}</p>
+        {% endif %} 
+        {% endfor %}
+      </div>
+
+      <div class="prices">
+        {% for book in books %}
+        <a href="{{book.url}}" target="_blank" class="price-link">
+          <div class="price-section">
+            <p class="book-title">{{book.title}}</p>
+            <p class="website-name">{{book.web}}</p>
+            <p class="price">PKR. {{book.price}}</p>
+          </div>
+        </a>
+        {% endfor %}
+      </div>
+      {% else %}
+      <h2 class="book-info book-title"> Tell us! Which book are you looking for? </h2>
+      {% endif %}
+    </div>
+  </body>
+</html>
