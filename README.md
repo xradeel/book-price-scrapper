@@ -70,7 +70,7 @@ pip install -r requirements.txt
 
 4️⃣ **Run RabbitMQ and Celery**  
 ```bash
-celery -A deals-of-books worker --loglevel=info
+celery -A bookadeal worker --loglevel=info
 ```  
 
 5️⃣ **Run Django server**  
